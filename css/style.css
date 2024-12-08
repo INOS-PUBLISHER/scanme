@@ -7314,9 +7314,11 @@ button.bg-dark:focus {
   background-image: linear-gradient(
     -225deg,
     #ff6c00 0%,
+    #ff0000 60%, 
+    #f4d506 67%,
+    #f4067b 100%
 
-    #ff0000 67%,
-    #000 100%
+
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -7328,44 +7330,61 @@ button.bg-dark:focus {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 30px;
+      font-size: 50px;
       text-align: center;
 }
 
 
 
 
-* {
-  box-sizing: border-box;
-}
+
+
+
 select {
-  /* Reset */
-  appearance: none;
-  border: 0;
-  outline: 0;
-  font: inherit;
-  /* Personalize */
-  width: 20rem;
-  padding: 1rem 4rem 1rem 1rem;
-  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
-    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
-  color: white;
-  border-radius: 0.25em;
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  /* Remove IE arrow */
-  &::-ms-expand {
-    display: none;
-  }
-  /* Remove focus outline */
-  &:focus {
-    outline: none;
-  }
-  /* <option> colors */
-  option {
-    color: inherit;
-    background-color: var(--option-bg);
-  }
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  color:#000;
+  cursor:pointer;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: #5c6664;
+  overflow: hidden;
+  border-radius: .25em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #ff7a10;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+}
+.select:hover::after {
+  color: #fff;
 }
 
 
