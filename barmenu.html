@@ -36,7 +36,7 @@
 			
 			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
+				<span class="oi oi-menu"></span>En / Alb
 			</button>
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
@@ -49,7 +49,7 @@
 	</nav>
 	<!-- END nav -->
 	
-	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/hero-bar.png');" data-stellar-background-ratio="0.5">
+	<!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('images/afood.png');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -57,7 +57,17 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
+
+
+
+
+
+	<vd-carousel direction="right" speed="1000" border="true" width="390px" height="350px" stoponhover="true" backgroundcolor="black">
+		<img src="images/foto1.jpg" alt="Immagine 1">
+		<img src="images/foto2.webp" alt="Immagine 2">
+		<img src="images/foto3 (2).webp" alt="Immagine 3">
+	  </vd-carousel>
 
 
 
@@ -95,11 +105,17 @@
 					<h3> Orari: 9:00 - 22:00</h3>
 					<h6>(E diela pushim)</h6>
 					<hr>
-          <br>
-					<h2 class="mb-4">Pije freskuese & alkolike</h2>
-					<button class="button-17" style=" font-size: 15px; right: 30px; "  role="button"><a href="fastfood.html" >Fast Food</a></button>					
-					<button class="button-17" style="font-size: 15px;right: 10px;"  role="button"><a href="kuzhina.html">Kuzhina</a></button>
-                    <button class="button-17" style="font-size: 15px;background-color: rgb(211, 211, 211); color: white;left: 10px;"  role="button"><a href="barmenu.html" >Pije freskuese & alkolike</a></button>
+          			<br>
+					  <h2 class="mb-4 animate-charcter">Pije freskuese & alkolike</h2>
+					  <div class="select" style="right: -20px;">
+						<select name="format" onchange="location = this.value;">
+						   <option selected disabled>Menuja Kryesore</option>
+						   <option value="fastfood.html" class="option">FastFood</option> 
+							<option value="kuzhina.html">Kuzhina</option> 
+							<option value="barmenu.html">Pije freskuese & alkolike</option> 
+						</select>
+					 </div>
+
 					
 				</div>
 			</div>
@@ -107,7 +123,7 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="menu-wrap">
 						<div class="heading-menu text-center ftco-animate">
-							<h3>Pije freskuese</h3>
+							<h2 class="mb-4 animate-charcter">Pije freskuese </h2>
 							<hr>
              				<img src="images/pepsi_main.png" style="display: inline; width: 200px;" alt="">
 			 				<br>
@@ -214,7 +230,7 @@
         <div class="col-md-6 col-lg-4">
 					<div class="menu-wrap">
 						<div class="heading-menu text-center ftco-animate">
-							<h3>Pije alkolike</h3>
+							<h2 class="mb-4 animate-charcter"> Pije alkolike</h2>
 							<hr>
 							<img src="images/heineken_main.png" style="display: inline; width: 200px;" alt="">
 							<br>
@@ -271,7 +287,7 @@
 
 	</section>
 
-    <button onclick="topFunction()" id="button" title="Go to top"></button>
+    <!-- <button onclick="topFunction()" id="button" title="Go to top"></button> -->
 	 
 
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2eff00"/></svg></div>
