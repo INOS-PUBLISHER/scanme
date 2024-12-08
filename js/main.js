@@ -298,3 +298,80 @@ btn.on('click', function(e) {
 
 
 
+
+
+
+
+
+
+
+class VdCarousel extends HTMLElement {
+	constructor() {
+	  super();
+	  this.images = Array.from(this.children);
+	  this.currentIndex = 0;
+	  this.timer = null;
+	  this.speed = parseInt(this.getAttribute("speed")) || 300;
+	  this.direction = this.getAttribute("direction") || "left";
+  
+	  this.stopOnHover = this.getAttribute("stoponhover") === "true";
+  
+	  // Stilizzazione dinamica
+	  this.style.display = "block";
+	  this.style.overflow = "hidden";
+	  this.style.position = "relative";
+	  this.style.width = this.getAttribute("width") || "300px";
+	  this.style.height = this.getAttribute("height") || "200px";
+	  this.style.border =
+		this.getAttribute("border") === "true" ? "2px solid #000" : "none";
+	  this.style.backgroundColor =
+		this.getAttribute("backgroundcolor") || "transparent";
+  
+	  this.images.forEach((img, index) => {
+		img.style.width = "100%";
+		img.style.height = "100%";
+		img.style.objectFit = "cover";
+		img.style.position = "absolute";
+		img.style.transition = `transform ${this.speed}ms ease-in-out`;
+  
+		// Posizione iniziale delle immagini
+		if (index === 0) {
+		  img.style.transform = "translateX(0)";
+		} else {
+		  img.style.transform =
+			this.direction === "left" ? "translateX(100%)" : "translateX(-100%)";
+		}
+	  });
+	}
+  
+	connectedCallback() {
+	  this.startCarousel();
+	  if (this.stopOnHover) {
+		this.addEventListener("mouseover", () => this.stopCarousel());
+		this.addEventListener("mouseout", () => this.startCarousel());
+	  }
+	}
+  
+	startCarousel() {
+	  this.timer = setInterval(() => this.nextImage(), this.speed + 2000);
+	}
+  
+	stopCarousel() {
+	  clearInterval(this.timer);
+	}
+  
+	nextImage() {
+	  // Transizione all'immagine corrente
+	  this.images[this.currentIndex].style.transform =
+		this.direction === "left" ? "translateX(-100%)" : "translateX(100%)";
+  
+	  // Aggiornamento dell'indice corrente
+	  this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  
+	  // Ripristino della trasformazione per l'immagine successiva
+	  this.images[this.currentIndex].style.transform = "translateX(0)";
+	}
+  }
+  
+  // Definire il custom element
+  customElements.define("vd-carousel", VdCarousel);
