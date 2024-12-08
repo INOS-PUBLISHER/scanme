@@ -60,6 +60,8 @@ body {
   text-align: left;
   background-color: #fff; }
 
+  svg{font-weight:bold;max-width:600px;height:100%;
+  left: 150px;}
 
   *
   {
@@ -7306,6 +7308,78 @@ button.bg-dark:focus {
 .mb-4,
 .my-4 {
   margin-bottom: 1.5rem !important; }
+  .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #ff6c00 0%,
+
+    #ff0000 67%,
+    #000 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 30px;
+      text-align: center;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
+
+
+
+
+
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
 
 .ml-4,
 .mx-4 {
@@ -8841,7 +8915,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(88 88 88 / 80%);
   font-weight: 400; }
 
 .wrap {
@@ -9557,7 +9631,7 @@ h1, h2, h3, h4, h5,
         transition: all 0.3s ease; }
     .menus .text p {
       margin-bottom: 0;
-      color: rgba(0, 0, 0, 0.8); }
+      color: rgba(255 162 0); }
   .menus .menu-img {
     width: 80px;
     height: 80px;
