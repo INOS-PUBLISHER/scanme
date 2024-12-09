@@ -393,11 +393,11 @@ body {
 
   #button {
     display: inline-block;
-    background-color: #ec4c12;
+    background-color: #ff9100;
     width: 50px;
     height: 50px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 10px;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -418,7 +418,7 @@ body {
   }
   #button:hover {
     cursor: pointer;
-    background-color: #333;
+    background-color: #ff5900;
   }
   #button:active {
     background-color: #555;
@@ -9661,12 +9661,12 @@ h1, h2, h3, h4, h5,
     margin-bottom: 0;
     border-bottom: none; }
   .menus .text {
-    width: calc(100% - 80px);
+    width: calc(100% - -100px);
     padding-left: 20px; }
     .menus .text .one-half {
       width: calc(100% - 70px); }
       .menus .text .one-half h3 {
-        font-size: 19px;
+        font-size: 17px;
         font-weight: 500;
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
@@ -9688,6 +9688,7 @@ h1, h2, h3, h4, h5,
         transition: all 0.3s ease; }
     .menus .text p {
       margin-bottom: 0;
+      font-size: 15px;
       color: #fff; }
   .menus .menu-img {
     width: 80px;
