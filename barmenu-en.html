@@ -27,6 +27,225 @@
 </head>
 <body>
 
+	<style>
+		/* customizable snowflake styling */
+		.snowflake {
+		  color: #ffffff;
+		  font-size: 1.1em;
+		  font-family: Arial, sans-serif;
+		  text-shadow: 0 0 1px #000;
+		}
+		
+		.snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+		</style>
+		<div class="snowflakes" aria-hidden="true">
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		  <div class="snowflake">
+			<div class="inner">●</div>
+		  </div>
+		</div>
+
+
+
+
+
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
@@ -40,8 +259,8 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="barmenu-en.html" class="nav-link"><img src="images/uk.png" width="10%" alt="">English</a></li>
-                    <li class="nav-item "><a href="barmenu.html" class="nav-link"><img src="images/al.png" width="10%" alt="">Albanian</a></li>
+					<li class="nav-item active"><a href="barmenu-en.html" class="nav-link"><img src="images/uk.png" width="10%" alt="">&nbsp; &nbsp;English</a></li>
+                    <li class="nav-item "><a href="barmenu.html" class="nav-link"><img src="images/al.png" width="10%" alt="">&nbsp; &nbsp;Albanian</a></li>
 				</ul>
 			</div>
 		</div>
@@ -70,7 +289,7 @@
 
 
 
-	<section class="trial-block shadow3" id="ContactUs">
+	  <section class="" id="ContactUs">
 		<div class="height150">
 			<div class="social-overlap process-scetion mt100">
 			 <div class="container 5">
@@ -81,9 +300,9 @@
 								
 																
 								<a href="tel:068 33 18 400" target="_blank" class="slider-nav-item"><i class="fa fa-phone"></i></a>
-								<a href="https://www.instagram.com/mystery_burger?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="slider-nav-item"><i class="fa fa-instagram"></i></a>
-								<a href="https://wa.me/+355674030500" target="_blank" class="slider-nav-item"><i class="fa fa-whatsapp"></i></a>
-								<a href="https://maps.app.goo.gl/NUbLS9JiTmaQ7uMi9?g_st=iw" target="_blank" class="slider-nav-item"><i class="fa fa-map"></i></a>
+								 <a href="https://www.instagram.com/mystery_burger/" target="_blank" class="slider-nav-item"><i class="fa fa-instagram"></i></a>
+								 <a href="https://wa.me/355683318400" target="_blank" class="slider-nav-item"><i class="fa fa-whatsapp"></i></a>
+								 <a href="https://maps.app.goo.gl/GwAZb8Qe3aiWS6bP9" target="_blank" class="slider-nav-item"><i class="fa fa-map"></i></a>
 							 </div>
 						 </div>
 					 </div>
@@ -101,7 +320,7 @@
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-7 text-center heading-section ftco-animate">
 					<hr>
-					<h3> Opening time: 9:00 - 22:00</h3>
+					<h3 class="Orari"> Opening time: 9:00 - 22:00</h3>
 					<h6>(Sunday off)</h6>
 					<hr>
 					<br>
@@ -116,6 +335,7 @@
 						   <option selected disabled>Main Menu</option>
 						   <option value="fastfood-en.html" class="option">Fast Food</option> 
 							<option value="kuzhina-en.html">Kitchen</option> 
+							<option value="kombinimet-en.html">Combinations</option> 
 							<option value="barmenu-en.html">Juice & alcoholic drinks</option> 
 						</select>
 					 </div>
