@@ -377,3 +377,11 @@ class VdCarousel extends HTMLElement {
   
   // Definire il custom element
   customElements.define("vd-carousel", VdCarousel);
+
+
+	  if (!/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // Nëse është kompjuter, ridrejto në faqen tjetër
+    window.location.href = "https://inos-publisher.github.io/example/404.html";
+}
+
+
