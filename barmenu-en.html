@@ -249,7 +249,7 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="fastfood.html"><img src="images/logo.png" width="130" alt="logo	"></a>
+			<a class="navbar-brand" href="fastfood-en.html"><img src="images/logo.png" width="130" alt="logo	"></a>
 			
 
 			
@@ -334,13 +334,12 @@
 
 					<div class="select" style="right: -20px;">
 						<select name="format" onchange="location = this.value;">
-						   <option selected disabled>Main Menu</option>
-						   <option value="fastfood-en.html" class="option">Fast Food</option> 
+						<option value="fastfood-en.html" class="option">Fast Food</option> 
 							<option value="kuzhina-en.html">Kitchen</option> 
 							<option value="kombinimet-en.html">Combinations</option> 
 							<option value="barmenu-en.html">Juice & alcoholic drinks</option> 
 						</select>
-					 </div>
+					</div>
 
 
 
@@ -529,20 +528,47 @@
 			</div>
 		</div>
 
+		<div class="main">
+			<a href="kombinimet-en.html" class="arrow-main arrow-prev">
+			  <span class="arrow-span"></span>
+			  <svg class="arrow-svg">
+				<circle cx="22" cy="22" r="21" stroke="white" stroke-width="2" />
+			  </svg>
+			</a>
+			<!-- <a href="next-link-url" class="arrow-main arrow-next">
+			  <span class="arrow-span"></span>
+			  <svg class="arrow-svg">
+				<circle cx="22" cy="22" r="21" stroke="white" stroke-width="2" />
+			  </svg>
+			</a> -->
+		  </div>
 	</section>
-
-    <!-- <button onclick="topFunction()" id="button" title="Go to top"></button> -->
-	 
-
+	<button onclick="topFunction()" id="button" title="Go to top"></button>
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2eff00"/></svg></div>
 
+	<script>
+		var arrows = document.querySelectorAll(".arrow-main");
 
-		<!-- footer -->
-		 
+arrows.forEach(function(arrow) {
+  arrow.addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent any default action
 
+    // Your URL condition
+    const targetURL = arrow.classList.contains('arrow-prev') ? "kombinimet-en.html" : "barmenu.html";
 
-
-
+    if (!arrow.classList.contains("animate")) {
+      arrow.classList.add("animate");
+      
+      setTimeout(function() {
+        arrow.classList.remove("animate");
+        
+        // Navigate after animation completes
+        window.location.href = targetURL;  // Navigate to the URL
+      }, 1600);
+    }
+  });
+});
+	</script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
