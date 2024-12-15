@@ -696,11 +696,48 @@
 					</div>
 			</div>
 		</div>
-
+		<!-- <button class="button-17" style=" font-size: 15px;right: -120px;"  role="button"><a href="kuzhina-en.html"><img src="images/right-arrow.png" width="40%" alt="Next Page"></a></button> -->
+		<div class="main">
+			<!-- <a href="kombinimet-en.html" class="arrow-main arrow-prev">
+			  <span class="arrow-span"></span>
+			  <svg class="arrow-svg">
+				<circle cx="22" cy="22" r="21" stroke="white" stroke-width="2" />
+			  </svg>
+			</a> -->
+			<a href="next-link-url" class="arrow-main arrow-next">
+			  <span class="arrow-span"></span>
+			  <svg class="arrow-svg">
+				<circle cx="22" cy="22" r="21" stroke="white" stroke-width="2" />
+			  </svg>
+			</a>
+		  </div>
 	</section>
 	<button onclick="topFunction()" id="button" title="Go to top"></button>
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2eff00"/></svg></div>
 
+	<script>
+		var arrows = document.querySelectorAll(".arrow-main");
+
+arrows.forEach(function(arrow) {
+  arrow.addEventListener("click", function(e) {
+    e.preventDefault(); // Prevent any default action
+
+    // Your URL condition
+    const targetURL = arrow.classList.contains('arrow-prev') ? "kombinimet.html" : "kuzhina.html";
+
+    if (!arrow.classList.contains("animate")) {
+      arrow.classList.add("animate");
+      
+      setTimeout(function() {
+        arrow.classList.remove("animate");
+        
+        // Navigate after animation completes
+        window.location.href = targetURL;  // Navigate to the URL
+      }, 1600);
+    }
+  });
+});
+	</script>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
