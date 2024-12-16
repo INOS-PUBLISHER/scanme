@@ -620,6 +620,55 @@ body {
 
 
 
+.navigation {
+  border-radius: 20px;
+  padding: 30px;
+}
+.navigation_item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50px;
+  background: #2C3E50;
+  margin-right: 5px;
+  outline: none;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.82, -0.12, 0.24, 0.56);
+  overflow: hidden;
+}
+.navigation_item:last-child {
+  margin-right: 0;
+}
+.navigation:hover .navigation_item {
+  transform: scale(0.9);
+  margin-right: -10px;
+  border-radius: 0;
+}
+.navigation:hover .navigation_item:last-child {
+  margin-right: 0;
+  border-radius: 0 20px 20px 0;
+}
+.navigation:hover .navigation_item:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.navigation:hover .navigation_item:hover {
+  background: #3498DB;
+  transform: scale(1.2);
+  border-radius: 20px;
+  z-index: 20;
+}
+
+
+
+
+
+
   
   /* CSS */
   .button-17 {
