@@ -627,14 +627,14 @@ body {
 .navigation_item {
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 40px;
   display: inline-block;
   vertical-align: middle;
   width: 60px;
   height: 60px;
   text-align: center;
   line-height: 60px;
-  border-radius: 50px;
+  border-radius: 20px;
   background: #2C3E50;
   margin-right: 5px;
   outline: none;
