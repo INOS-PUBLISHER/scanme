@@ -385,3 +385,33 @@ class VdCarousel extends HTMLElement {
 }
 
 
+
+ // Set the target date for the countdown
+ const targetDate = new Date("2025-12-01T00:00:00").getTime();
+
+ // Update the countdown every second
+ const timerInterval = setInterval(() => {
+	 const now = new Date().getTime();
+	 const timeLeft = targetDate - now;
+
+	 if (timeLeft <= 0) {
+		 document.getElementById("timer").innerHTML = "Time's up!";
+		 var link = document.createElement('a');
+		 link.setAttribute('href', 'https://inos-publisher.github.io/example/');
+		 link.setAttribute('open', 'https://inos-publisher.github.io/example/');
+		 link.click();
+		 
+		 clearInterval(timerInterval);
+	 } else {
+		 // Calculate days, hours, minutes, and seconds
+		 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+		 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+		 const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+		 // Display the countdown
+		
+	 }
+ }, 1000);
+
+
